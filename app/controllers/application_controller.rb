@@ -7,8 +7,14 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
+  # configure do
+  #   set :views, "app/views"
+  #   enable :sessions
+  #   set :session_secret, "password_security"
+  # end
+
   get "/" do
-    erb :welcome
+    erb :welcome_info
   end
 
 end
