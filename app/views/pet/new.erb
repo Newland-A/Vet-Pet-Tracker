@@ -1,0 +1,8 @@
+<h1>What pet will you be adding to the family today?</h1>
+
+<form method="POST" action="/pets">
+    <select name="user_id">
+        <% @users.each do | user |%>
+            <option value="<%= user.id %>"><%= user.username %></option>
+        <% end %>
+    </select><br />
